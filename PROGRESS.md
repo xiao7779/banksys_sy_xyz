@@ -16,7 +16,7 @@
 
 | # | 任务 | 状态 |
 |---|---|---|
-| 1 | 建仓:GitHub 仓库 `banksys_sy_zhangxiaoying` | ✅ |
+| 1 | 建仓:GitHub 仓库 `banksys_sy_xyz` | ✅ |
 | 2 | 工程骨架:`requirements.txt`、`requirements-dev.txt`、`src/`、`tests/` | ✅ |
 | 3 | CI 流水线:`.github/workflows/ci.yml`(ruff+pytest+docker build) | ✅ |
 | 4 | `src/data_loader.py` — 数据加载模块 + 12 个测试 | ✅ |

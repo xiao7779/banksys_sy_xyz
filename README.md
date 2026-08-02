@@ -1,4 +1,4 @@
-# banksys_sy_zhangxiaoying
+# banksys_sy_xyz
 
 银行营销数据交互式分析与在线认购预测系统。
 

@@ -7,7 +7,7 @@
 
 ## 1. 项目是什么
 
-- **项目名称**:`banksys_sy_zhangxiaoying`
+- **项目名称**:`banksys_sy_xyz`
 - **一句话目标**:基于银行营销数据,提供交互式数据分析与在线预测(认购意向)的 Web 应用。
 - **使用者/受益者**:银行业务人员 / 数据分析师,用于探索营销数据特征并预测客户是否会认购定期存款产品。
 - **核心功能**:
@@ -37,7 +37,7 @@
 ## 3. 目录地图
 
 ```text
-banksys_sy_zhangxiaoying/
+banksys_sy_xyz/
 ├── standards/                     # AI 项目记忆与通用规范
 │   ├── README.md
 │   ├── 00-project-context.md
@@ -75,7 +75,8 @@ banksys_sy_zhangxiaoying/
 ├── .dockerignore
 ├── .gitignore
 ├── .github/workflows/
-│   └── ci.yml
+│   ├── ci.yml
+│   └── cd.yml
 ├── PROGRESS.md
 └── README.md
 ```
@@ -106,9 +107,10 @@ banksys_sy_zhangxiaoying/
 | 占位符 | 本项目取值 | 说明 |
 |---|---|---|
 | `<APP>` | `banksys-sy` | 应用名/镜像名/容器名 |
-| `<DEPLOY_DIR>` | 本地部署,无需远程目录 | 仅本地 `docker run` |
+| `<DEPLOY_DIR>` | `/opt/banksys-sy` | CD 远程部署目录 |
 | `<PORT>` | `8888` | 服务端口(用户指定) |
+| `<PORT_MAX>` | `8895` | 端口回退上限 |
 | `<PYVER>` | `3.11` | Python 版本 |
-| `<HEALTHCHECK>` | `/health` (Streamlit 默认 `/` 可达即可) | Streamlit 无独立 health 端点,以首页 HTTP 200 为健康标志 |
-| `<SSH_USER>` | 不适用 | 无远程部署 |
-| `<SSH_HOST>` | 不适用 | 无远程部署 |
+| `<HEALTHCHECK>` | `/` (Streamlit 首页 HTTP 200) | 健康检查 |
+| `<SSH_USER>` | `待配置` | 远程服务器登录用户 |
+| `<SSH_HOST>` | `待配置` | 服务器公网 IP 或域名 |
