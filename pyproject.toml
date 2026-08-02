@@ -1,0 +1,35 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "C4", "PIE", "BLE", "RUF"]
+ignore = [
+    "RUF001",  # 中文 UI 消息中的全角标点
+    "RUF002",  # 中文文档的全角标点
+    "RUF003",  # 中文注释的全角标点
+    "N806",   # ML 惯例：X/y 大写变量名
+    "N803",   # ML 惯例：X_test 参数名
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "src/ui/*",
+    "*/__main__*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
+fail_under = 80
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
