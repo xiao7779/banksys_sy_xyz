@@ -17,8 +17,8 @@ envproj/
 data/*.csv
 
 # Model artifacts (不进 Git)
-models/*.pkl
-models/*.joblib
+models/*
+!models/.gitkeep
 
 # IDE
 .vscode/
